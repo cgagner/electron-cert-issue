@@ -18,8 +18,9 @@ function createWindow () {
     height: 600
   })
 
-  //mainWindow.loadURL('https://prod.idrix.eu/secure/')
-  mainWindow.loadURL('https://www.computerhope.com/javascript/password-example.htm')
+  mainWindow.loadURL('https://prod.idrix.eu/secure/')
+  //mainWindow.loadURL('https://oceanai.mit.edu/svn/moos-ivp/releases/moos-ivp-19.8.2')
+  //mainWindow.loadURL('https://www.computerhope.com/javascript/password-example.htm'
 }
 
 // This method will be called when Electron has finished
