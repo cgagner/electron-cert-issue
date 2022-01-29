@@ -4,8 +4,11 @@ const path = require('path')
 
 app.on('select-client-certificate', (event, webContents, url, list, callback) => {
   console.log('select-client-certificate called')
+  console.log('Available Certs: ')
+  console.log(list)
+  
   event.preventDefault()
-  callback(list[0])
+  //callback(list[1])
 })
 
 function createWindow () {
@@ -15,7 +18,8 @@ function createWindow () {
     height: 600
   })
 
-  mainWindow.loadURL('https://prod.idrix.eu/secure/')
+  //mainWindow.loadURL('https://prod.idrix.eu/secure/')
+  mainWindow.loadURL('https://www.computerhope.com/javascript/password-example.htm')
 }
 
 // This method will be called when Electron has finished

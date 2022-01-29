@@ -8,6 +8,27 @@ npm install
 npm start
 ```
 
+## Creating a Client Certificate on Linux
+
+### Install NSS Tools
+
+On Ubuntu/Debian: 
+```bash
+sudo apt-get install -y libnss3-tools
+```
+
+```bash
+certutil -S  -d ${HOME}/.pki/nssdb -n "John Doe" -x -t ',,' -s "CN=John Doe"
+```
+
+
+Add Smart card support to Chrome:
+
+```bash
+modutil -dbdir ${HOME}/.pki/nssdb -add "Smart Card" -libfile /usr/lib/arm-linux-gnueabihf/opensc-pkcs11.so
+```
+
+
 ## Creating a Client Certificate on Mac
 
 1. Open the ```Keychain Access``` application. This is in the ```Utilities``` folder.
